@@ -1,0 +1,69 @@
+ets Jun  8 2016 00:22:57
+
+rst:0xc (SW_CPU_RESET),boot:0x1a (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:4
+load:0x3fff0034,len:6932
+load:0x40078000,len:14332
+load:0x40080400,len:3980
+entry 0x40080680
+␛[0;32mI (29) boot: ESP-IDF v4.2-dev-1303-gcd4fa46f5 2nd stage bootloader␛[0m
+␛[0;32mI (29) boot: compile time 16:03:36␛[0m
+␛[0;32mI (29) boot: chip revision: 1␛[0m
+␛[0;32mI (33) boot_comm: chip revision: 1, min. bootloader chip revision: 0␛[0m
+␛[0;32mI (40) boot.esp32: SPI Speed      : 40MHz␛[0m
+␛[0;32mI (45) boot.esp32: SPI Mode       : DIO␛[0m
+␛[0;32mI (50) boot.esp32: SPI Flash Size : 4MB␛[0m
+␛[0;32mI (54) boot: Enabling RNG early entropy source...␛[0m
+␛[0;32mI (60) boot: Partition Table:␛[0m
+␛[0;32mI (63) boot: ## Label            Usage          Type ST Offset   Length␛[0m
+␛[0;32mI (70) boot:  0 nvs              WiFi data        01 02 00009000 00006000␛[0m
+␛[0;32mI (78) boot:  1 phy_init         RF data          01 01 0000f000 00001000␛[0m
+␛[0;32mI (85) boot:  2 factory          factory app      00 00 00010000 00100000␛[0m
+␛[0;32mI (93) boot: End of partition table␛[0m
+␛[0;32mI (97) boot_comm: chip revision: 1, min. application chip revision: 0␛[0m
+␛[0;32mI (104) esp_image: segment 0: paddr=0x00010020 vaddr=0x3f400020 size=0x0eb04 ( 60164) map␛[0m
+␛[0;32mI (136) esp_image: segment 1: paddr=0x0001eb2c vaddr=0x3ffb0000 size=0x014ec (  5356) load␛[0m
+␛[0;32mI (138) esp_image: segment 2: paddr=0x00020020 vaddr=0x400d0020 size=0x2f680 (194176) map␛[0m
+␛[0;32mI (216) esp_image: segment 3: paddr=0x0004f6a8 vaddr=0x3ffb14ec size=0x00cd4 (  3284) load␛[0m
+␛[0;32mI (218) esp_image: segment 4: paddr=0x00050384 vaddr=0x40080000 size=0x00400 (  1024) load␛[0m
+␛[0;32mI (223) esp_image: segment 5: paddr=0x0005078c vaddr=0x40080400 size=0x0a270 ( 41584) load␛[0m
+␛[0;32mI (255) boot: Loaded app from partition at offset 0x10000␛[0m
+␛[0;32mI (255) boot: Disabling RNG early entropy source...␛[0m
+␛[0;32mI (256) cpu_start: Pro cpu up.␛[0m
+␛[0;32mI (259) cpu_start: Application information:␛[0m
+␛[0;32mI (264) cpu_start: Project name:     ethernet_demo␛[0m
+␛[0;32mI (270) cpu_start: App version:      716d5a2-dirty␛[0m
+␛[0;32mI (275) cpu_start: Compile time:     May 23 2020 17:00:07␛[0m
+␛[0;32mI (281) cpu_start: ELF file SHA256:  97ba04a35b7c085f...␛[0m
+␛[0;32mI (287) cpu_start: ESP-IDF:          v4.2-dev-1303-gcd4fa46f5␛[0m
+␛[0;32mI (294) cpu_start: Starting app cpu, entry point is 0x40081178␛[0m
+␛[0;32mI (286) cpu_start: App cpu up.␛[0m
+␛[0;32mI (304) heap_init: Initializing. RAM available for dynamic allocation:␛[0m
+␛[0;32mI (311) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM␛[0m
+␛[0;32mI (317) heap_init: At 3FFB3A08 len 0002C5F8 (177 KiB): DRAM␛[0m
+␛[0;32mI (324) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM␛[0m
+␛[0;32mI (330) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM␛[0m
+␛[0;32mI (336) heap_init: At 4008A670 len 00015990 (86 KiB): IRAM␛[0m
+␛[0;32mI (342) cpu_start: Pro cpu start user code␛[0m
+␛[0;32mI (361) spi_flash: detected chip: gd␛[0m
+␛[0;32mI (361) spi_flash: flash io: dio␛[0m
+␛[0;32mI (362) cpu_start: Starting scheduler on PRO CPU.␛[0m
+␛[0;32mI (0) cpu_start: Starting scheduler on APP CPU.␛[0m
+␛[0;31mE (584) emac_esp32: emac_esp32_init(307): reset timeout␛[0m
+␛[0;31mE (584) esp_eth: esp_eth_driver_install(194): init mac failed␛[0m
+ESP_ERROR_CHECK failed: esp_err_t 0xffffffff (ESP_FAIL) at 0x400d304c
+file: "/home/asp/dev/ESP32-GATEWAY/SOFTWARE/Newest-board-revisions/ETH_PHY_demo/main/ethernet_example_v4_2.c" line 131
+func: app_main
+expression: esp_eth_driver_install(&config, &eth_handle)
+
+abort() was called at PC 0x400d304f on core 0
+
+Backtrace:0x40085287:0x3ffb5770 0x40084ffd:0x3ffb5790 0x400876ce:0x3ffb57b0 0x400d304f:0x3ffb5820 0x400d3960:0x3ffb5840 0x400d1e42:0x3ffb58b0 0x4008961d:0x3ffb58e0
+
+
+ELF file SHA256: 97ba04a35b7c085f
+
+Rebooting...
